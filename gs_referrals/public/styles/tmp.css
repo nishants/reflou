@@ -1,0 +1,38 @@
+/*this css must only have style tmporarily, unless refactored
+into the css lib*/
+body{
+  max-width: 800px;
+}
+#home-page{
+  padding-top: 30%;
+  font-size: 32px;
+}
+
+#app-loader-page{
+  padding-top: 40%;
+}
+
+#guide-view{
+  padding-top: 5%;
+}
+
+.sample-location-image{
+  background-image: url(../images/sample-location.jpeg);
+}
+
+#empty-div-to-push-button-to-bottom{
+  height: 70%;
+}
+
+/******************************************************************************************************
+Colors for testing
+******************************************************************************************************
+*/
+#body {
+  background-color: #ffff00;
+}
+
+#guide-view {
+  background-color: #d9534f;
+}
+/******************************************************************************************************/

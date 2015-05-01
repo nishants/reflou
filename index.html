@@ -14,25 +14,28 @@
 
     <script src="scripts/lib/jquery.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/promise.js"></script>
 </head>
 
 <body id='reflou' class="full-screen centered-display">
     <!-- Create random values for state field-->
     <h1 id="logo"> Referral Lounge</h1>
 
-    <form id="linked-in-auth" action="https://www.linkedin.com/uas/oauth2/authorization">
-        <input type="hidden" name="response_type" value="code"/>
-        <input type="hidden" name="client_id" value="757j1l2lekta5q"/>
-        <input type="hidden" name="redirect_uri" value="http://localhost:8080/reflou"/>
-        <input type="hidden" name="state" value="987654321"/>
-        <input type="hidden" name="scope" value="r_basicprofile"/>
-        <button type="submit">Login wiht linkedin</button>
-    </form>
+
 
     <script type="text/javascript">
-        $(document).ready(
+        var showContacts = function(response){
+            console.log(response)
+        };
+        var errorGettingContacts = function(response){
+            console.error(response)
+        };
 
-        );
+        var init = function(){
+            reflou.fetchContacts().ok(showContacts).error(errorGettingContacts)
+        };
+
+        $(document).ready(init);
     </script>
 </body>
 
